@@ -1,6 +1,6 @@
-import { Component, OnInit, Output, EventEmitter} from '@angular/core';
-import { User } from './../models';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-form',
@@ -8,17 +8,23 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent implements OnInit {
+
   @Output() existingUser = new EventEmitter();
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
-  signIn(form: NgForm){
+
+  createAccount(form: NgForm){
     console.log(form.value);
     this.existingUser.emit(form.value);
-    
+  }
 
+  signup(){
+    this.router.navigate(['/signup']);
   }
 
 }
