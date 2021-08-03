@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { AdminComponent } from './admin/admin.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminComponent,
     RegistrationFormComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    UserComponent
     
   ],
   imports: [
