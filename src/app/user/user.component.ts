@@ -38,4 +38,8 @@ export class UserComponent implements OnInit {
   login(){
     this.router.navigate(['/login']);
   }
+
+  signup(){
+    this.router.navigate(['/signup']);
+  }
 }
