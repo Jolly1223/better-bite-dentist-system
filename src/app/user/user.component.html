@@ -10,11 +10,30 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
+    <style>
+        .GFG {
+            color: black;
+            font-size: 50px;
+            text-shadow: -1px 1px 0 white,
+                          1px 1px 0 white,
+                         1px -1px 0 white,
+                        -1px -1px 0 white;
+        }
+        .GF {
+            color: white;
+            font-size: 50px;
+            text-shadow: -1px 1px 0 black,
+                          1px 1px 0 black,
+                         1px -1px 0 black,
+                        -1px -1px 0 black;
+        }
+    </style>
 </head>
 
 <body>
     <div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark default">
             <button
               class="navbar-toggler"
               type="button"
@@ -27,9 +46,9 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-              <a class="navbar-brand" href="#">BETTER BITE DENTIST SYSTEM</a>
+              <a class="navbar-brand" href="#" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">BETTER BITE DENTIST SYSTEM</a>
               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <!---> <li class="nav-item active">
+                <!-- <li class="nav-item active">
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li> -->
                 <!-- ->  <li class="nav-item">
@@ -47,15 +66,16 @@
                 <button type="button" class="btn btn-primary" (click)="signup()">SIGN UP</button>
               </form>
             </div>
-          </nav>
+        </nav>
       
           <!-- Background image -->
           <div class="card bg-dark text-white">
             <img class="card-img" src="http://churchroaddental.com/wp-content/uploads/2015/11/Church-Road-Oral-Dental-Surgery.jpg" alt="Card image">
             <div class="card-img-overlay text-center">
-              <h5 class="card-title " style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 150px; margin-top: 100px;">BETTER <br> BITE</h5><br><br><br>
-              <p class="card-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif; font-size: 30px;">All aboard for healthy smiles.</p>
-              <p class="card-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif; font-size: 30px;">Make an appointment now!</p>
+              <h5 class="card-title GFG" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 150px; margin-top: 100px;">BETTER <br> BITE</h5><br><br><br>
+              <p class="card-text GF" style="font-family:Lucida Handwriting; font-size: 30px;">All aboard for healthy smiles.</p>
+              <p class="card-text GF" style="font-family:
+              Lucida Handwriting; font-size: 30px;">Make an appointment now!</p>
             </div>
           </div>
           <!-- <div
@@ -197,13 +217,42 @@
 
     <div *ngIf="!treatments">
         <p class="text-center text-danger">dere ibutang ang treatments gah recita</p>
+        <div class="container">
+        <table class="table table-hover">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Name of Treatments </th>
+                    <th scope="col">Cost</th>
+                    <th scope="col">Duration</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     </div>
 
     <div>
         <br><br>
         <p class="text-center">Footer</p>
     </div>
-
+    
 </body>
 
 

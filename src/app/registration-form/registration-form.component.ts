@@ -2,6 +2,7 @@ import { Component, OnInit, Output,EventEmitter } from '@angular/core';
 import { User } from './../models';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-registration-form',
@@ -13,7 +14,8 @@ export class RegistrationFormComponent implements OnInit {
   @Output() newUser = new EventEmitter();
 
   constructor(
-    private router: Router
+    private router: Router,
+    private authService: AuthService
   ) { }
 
   ngOnInit(): void {
@@ -21,7 +23,12 @@ export class RegistrationFormComponent implements OnInit {
 
   createAccount(form: NgForm){
     console.log(form.value);
-    this.newUser.emit(form.value);
+    this.authService.register(form.value).subscribe(user => {
+      alert('Register successfully')
+    },errors=>{
+      alert("Email address is already existing");
+    })
+    // this.newUser.emit(form.value);
   }
 
   login(){
