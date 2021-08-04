@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-admin',
-  templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.css']
+  selector: 'app-patient',
+  templateUrl: './patient.component.html',
+  styleUrls: ['./patient.component.css']
 })
-export class AdminComponent implements OnInit {
-    dashboard:boolean = false;
+export class PatientComponent implements OnInit {
+  dashboard:boolean = false;
     showSchedule: boolean = true;
     showAppointment: boolean = true;
     showPatient: boolean = true;
@@ -15,7 +15,7 @@ export class AdminComponent implements OnInit {
     showTreatment: boolean = true;
 
   constructor(
-    private router: Router
+    private router:  Router
   ) { }
 
   ngOnInit(): void {
@@ -77,6 +77,5 @@ export class AdminComponent implements OnInit {
   signout(){
     this.router.navigate(['/login']);
   }
-
 
 }

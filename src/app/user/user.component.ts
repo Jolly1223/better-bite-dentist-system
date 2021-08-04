@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
 })
 export class UserComponent implements OnInit {
 
-  appointments: boolean = false;
-  services: boolean = true;
+  appointments: boolean = true;
+  services: boolean = false;
   treatments: boolean = true;
 
   constructor(private router: Router) { }
@@ -37,6 +37,12 @@ export class UserComponent implements OnInit {
 
   login(){
     this.router.navigate(['/login']);
+  }
+
+  makeAppointment(){
+    this.appointments = false;
+    this.services = true;
+    this.treatments= true;
   }
 
   signup(){
